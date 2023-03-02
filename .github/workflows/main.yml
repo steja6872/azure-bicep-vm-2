@@ -11,5 +11,9 @@ jobs:
       with:
         creds: ${{ secrets.AZ_CRED }}
         
+    - name: azure cli script
+      uses: azure/CLI@v1
+      with:
+         azcliversion: 2.30.0 
     
     - run: az deployment group create  --resource-group Demo --template-file ./template.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
