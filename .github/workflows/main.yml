@@ -1,0 +1,15 @@
+on: [push]
+name: AzureLogin
+
+jobs:
+
+  build-and-deploy:
+    runs-on: [windows-latest]
+    steps:
+    -  uses: actions/checkout@v1     
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZ_CRED }}
+        
+    
+    - run: az deployment group create  --resource-group Demo --template-file ./vm_creation.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
