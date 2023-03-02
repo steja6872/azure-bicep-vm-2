@@ -98,7 +98,7 @@ param vmSize string = 'Standard_D2s_v5'
 param location string = resourceGroup().location
 
 @description('Name of the virtual machine.')
-param vmName string = 'simple-vm'
+param vmName string = 'simple-vm123'
 
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var nicName = 'myVMNic'
