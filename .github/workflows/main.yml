@@ -15,5 +15,5 @@ jobs:
       uses: azure/CLI@v1
       with:
          azcliversion: 2.30.0
-         inlinescript: az deployment group create  --resource-group Res_Grp --template-file ./template.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
+         inlinescript: az deployment group create  --resource-group Res_Grp --template-file ./template123.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
 
