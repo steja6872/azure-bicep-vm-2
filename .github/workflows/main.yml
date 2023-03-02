@@ -16,4 +16,4 @@ jobs:
       with:
          azcliversion: 2.30.0 
     
-    - run: az deployment group create  --resource-group Demo --template-file ./template.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
+    - run: az deployment group create  --resource-group Res_Grp --template-file ./template.bicep --parameters adminPassword=${{ secrets.ADMINPASSWORD}}
